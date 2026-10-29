@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="以更大的三寶樹濕地、更開敞的候鳥通道，構想新田與河套的生態未來。">
+  <title>讓候鳥自在飛翔｜三寶樹濕地方案</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/proposal-village-v4.webp" imagesrcset="assets/proposal-village-v4-800.webp 800w, assets/proposal-village-v4-1200.webp 1200w, assets/proposal-village-v4.webp 1774w" imagesizes="(max-width:680px) calc(100vw - 32px), calc(100vw - 64px)">
+  <link rel="stylesheet" href="styles.css">
+  <script src="assets/comparison-data-v2.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="render-compare.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#comparison">跳到方案對比</a>
+  <header class="site-header"><a class="brand" href="#top">三寶樹<span>濕地與候鳥</span></a><a class="header-link" href="#comparison">兩方案對比 <span aria-hidden="true">↗</span></a></header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-heading wrap">
+        <div><p class="eyebrow"><span class="living-dot" aria-hidden="true"></span>三寶樹 · 新田 · 河套</p><h1 id="hero-title">讓三寶樹更完整，<br><span>讓候鳥自在飛翔。</span></h1></div>
+        <div class="hero-intro"><p>更大的濕地，更寬敞的通道。<br>讓城市生長，也讓自然延續。</p><a class="round-link" href="#comparison">看見方案的不同 <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <figure class="hero-figure" id="comparison">
+        <div class="render-viewbar"><div class="segmented" role="group" aria-label="渲染觀看位置"><button type="button" data-render-view="aerial" aria-pressed="false">濕地鳥瞰</button><button type="button" data-render-view="village" aria-pressed="true">新田村視角</button></div><p id="render-view-subtitle">從村口望向濕地</p></div>
+        <div class="viewer-labels render-labels"><span class="proposal-label">我的方案<small id="render-proposal-description">望見大片濕地</small></span><span>政府方案<small id="render-government-description">地台與建築圍合</small></span></div>
+        <div class="hero-image-wrap viewer rendered-viewer" id="render-viewer" role="group" aria-label="兩方案渲染圖對比" aria-busy="true">
+          <div class="scene government-scene"><img id="government-render" src="assets/government-village-v4.webp" srcset="assets/government-village-v4-800.webp 800w, assets/government-village-v4-1200.webp 1200w, assets/government-village-v4.webp 1774w" sizes="(max-width:680px) calc(100vw - 32px), calc(100vw - 64px)" width="1774" height="887" alt="政府方案新田村視角：抬高地台與新建築遮擋村口向濕地的視野" fetchpriority="high" draggable="false"></div>
+          <div class="proposal-clip"><div class="scene proposal-scene"><img id="wetland-hero" src="assets/proposal-village-v4.webp" srcset="assets/proposal-village-v4-800.webp 800w, assets/proposal-village-v4-1200.webp 1200w, assets/proposal-village-v4.webp 1774w" sizes="(max-width:680px) calc(100vw - 32px), calc(100vw - 64px)" width="1774" height="887" alt="我的方案新田村視角：從相同村口望見大片魚塘與開敞濕地" fetchpriority="high" draggable="false"></div></div>
+          <div class="split-line" aria-hidden="true"><span>↔</span></div>
+          <div id="render-error" class="image-error" hidden><p>效果圖暫時未能載入。</p><button type="button" id="retry-renders">重新載入</button></div>
+        </div>
+        <div class="render-controls"><div class="viewer-footer" id="render-slider-row"><label for="render-range">滑動看差異</label><input id="render-range" type="range" min="0" max="100" value="50" aria-label="渲染圖中我的方案顯示比例"><output id="render-output" for="render-range">50%</output></div><button id="render-layout" class="plain-button" type="button" aria-pressed="false">並排看</button></div>
+        <figcaption><span id="render-caption-lead">從新田村望向濕地。</span><span id="render-caption-note">政府平台較村地面高約7米 · 情境示意</span></figcaption>
+      </figure>
+      <div class="principles wrap" aria-label="方案主張">
+        <article><span class="principle-number">01</span><div><h2>更大的三寶樹濕地</h2><p>保留成片魚塘與綠地，讓濕地生境連成一體。</p></div></article>
+        <article><span class="principle-number">02</span><div><h2>更寬敞的候鳥通道</h2><p>打開建築之間的空間，讓候鳥順暢抵達濕地。</p></div></article>
+      </div>
+    </section>
+    <section id="model-comparison" class="comparison wrap" aria-labelledby="comparison-title">
+      <div class="section-heading"><div><p class="eyebrow">原模型對比</p><h2 id="comparison-title">把空間留給生態。</h2></div><p>同一角度，觀察濕地前緣與候鳥入口。</p></div>
+      <div class="tools">
+        <div class="segmented" role="group" aria-label="觀看角度"><button type="button" data-view="main" aria-pressed="true">鳥瞰</button><button type="button" data-view="overview" aria-pressed="false">高角度</button><button type="button" data-view="top" aria-pressed="false">俯視</button></div>
+        <div class="secondary-tools"><label class="check"><input id="route-toggle" type="checkbox" checked>候鳥方向</label><button class="plain-button" id="layout-toggle" type="button" aria-pressed="false">並排看</button><button class="plain-button" id="fullscreen" type="button">放大</button></div>
+      </div>
+      <div class="viewer-labels"><span class="proposal-label">我的方案</span><span>政府方案</span></div>
+      <div class="viewer show-routes" id="viewer" aria-busy="false">
+        <div class="scene government-scene"><img id="government-image" src="assets/government-main.webp" srcset="assets/government-main-800.webp 800w, assets/government-main-1200.webp 1200w, assets/government-main.webp 2400w" sizes="(max-width:680px) calc(100vw - 32px), (max-width:1450px) calc(100vw - 88px), 1360px" width="2400" height="1210" alt="政府方案，同角度模型圖" loading="lazy"><svg class="route-overlay" aria-hidden="true" viewBox="0 0 2400 1210"></svg></div>
+        <div class="proposal-clip"><div class="scene proposal-scene"><img id="proposal-image" src="assets/proposal-main.webp" srcset="assets/proposal-main-800.webp 800w, assets/proposal-main-1200.webp 1200w, assets/proposal-main.webp 2400w" sizes="(max-width:680px) calc(100vw - 32px), (max-width:1450px) calc(100vw - 88px), 1360px" width="2400" height="1210" alt="我的方案，同角度模型圖" loading="lazy"><svg class="route-overlay" aria-hidden="true" viewBox="0 0 2400 1210"></svg></div></div>
+        <div class="split-line" aria-hidden="true"><span>↔</span></div>
+        <div id="image-error" class="image-error" hidden><p>圖像暫時未能載入。</p><button type="button" id="retry-images">重新載入</button></div>
+      </div>
+      <div class="viewer-footer"><label for="compare-range">拖動對比</label><input id="compare-range" type="range" min="0" max="100" value="50" aria-label="我的方案顯示比例"><output id="range-output" for="compare-range">50%</output></div>
+      <p class="comparison-note">兩方案採用相同模型鏡頭；候鳥方向為設計示意。</p>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><div><strong>讓自然，成為方案的起點。</strong><p>三寶樹濕地 · 新田與河套生態願景</p></div><div class="footer-links"><a id="render-download-primary" href="assets/proposal-village-v4.png" download>下載此視角主圖 ↗</a><a id="render-download-comparison" href="assets/village-comparison-v4.svg" download>下載渲染對比圖 ↗</a></div></footer>
+  <div id="status" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>
