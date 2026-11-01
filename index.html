@@ -13,10 +13,11 @@
   <script src="app.js" defer></script>
   <script src="assets/proposal-pen-gallery-20261031.js" defer></script>
   <script src="render-compare.js" defer></script>
+  <script src="assets/corridor-animation.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#comparison">跳到方案對比</a>
-  <header class="site-header"><a class="brand" href="#top">三寶樹<span>濕地與候鳥</span></a><a class="header-link" href="#comparison">兩方案對比 <span aria-hidden="true">↗</span></a></header>
+  <header class="site-header"><a class="brand" href="#top">三寶樹<span>濕地與候鳥</span></a><a class="header-link" href="#corridor-animation">候鳥通道動畫 <span aria-hidden="true">↗</span></a></header>
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-heading wrap">
@@ -39,6 +40,20 @@
         <article><span class="principle-number">01</span><div><h2>更大的三寶樹濕地</h2><p>保留成片魚塘與綠地，讓濕地生境連成一體。</p></div></article>
         <article><span class="principle-number">02</span><div><h2>更寬敞的候鳥通道</h2><p>打開建築之間的空間，讓候鳥順暢抵達濕地。</p></div></article>
       </div>
+    </section>
+    <section id="corridor-animation" class="flight-section wrap" aria-labelledby="flight-title" data-ready="loading">
+      <div class="flight-heading"><h2 id="flight-title">讓候鳥，有更寬敞的通道。</h2><p>從河套飛向三寶樹，同步看見兩個方案的空間差異。</p></div>
+      <div class="flight-pair">
+        <figure><figcaption><strong>政府方案</strong><span>建築逼近濕地前緣</span></figcaption><canvas id="flight-government" width="1200" height="605" data-scheme="government" role="img" aria-label="政府方案候鳥飛行示意，通道在建築之間收窄">政府方案：建築逼近濕地前緣，候鳥入口較窄。</canvas><p>入口收窄，濕地前緣受建築包圍。</p></figure>
+        <figure><figcaption><strong>我的方案</strong><span>把空間留給濕地</span></figcaption><canvas id="flight-proposal" width="1200" height="605" data-scheme="proposal" role="img" aria-label="我的方案候鳥飛行示意，更寬敞的通道連接更大的三寶樹濕地">我的方案：更寬敞的候鳥通道，連接更大的三寶樹濕地。</canvas><p>更大的三寶樹濕地，更開敞的候鳥入口。</p></figure>
+      </div>
+      <div class="flight-transport" role="group" aria-label="候鳥動畫控制">
+        <button type="button" id="flight-play" aria-pressed="true">暫停</button><button type="button" id="flight-replay" class="plain-button">重播</button>
+        <label class="sr-only" for="flight-time">動畫進度</label><input id="flight-time" type="range" min="0" max="1800" value="0" step="1" aria-label="動畫進度，百分之一秒"><output id="flight-clock" for="flight-time">00 / 18 秒</output>
+      </div>
+      <div class="flight-bottom"><p id="flight-phase">從河套方向飛來</p><div><label class="check"><input type="checkbox" id="flight-overlay" checked>通道示意</label><a href="assets/bird-corridor-comparison-20261101.mp4" download>下載動畫 ↗</a></div></div>
+      <p class="flight-note">兩方案使用同一模型鏡頭及鳥群數量。綠帶寬度與鳥群展開為設計示意，並非實測寬度或生態模擬。</p>
+      <p id="flight-status" role="status" aria-live="polite">正在載入兩方案模型…</p><button id="flight-retry" type="button" class="plain-button">重新載入動畫</button>
     </section>
     <section id="model-comparison" class="comparison wrap" aria-labelledby="comparison-title">
       <div class="section-heading"><div><p class="eyebrow">原模型對比</p><h2 id="comparison-title">把空間留給生態。</h2></div><p>同一角度，觀察濕地前緣與候鳥入口。</p></div>
